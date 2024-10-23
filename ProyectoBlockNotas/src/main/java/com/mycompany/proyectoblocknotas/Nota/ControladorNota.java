@@ -63,9 +63,9 @@ public class ControladorNota {
     }
 
     // Actualizar
-    public void actualizarNotas(int index, Nota nuevaEstudiante) {
+    public void actualizarNotas(int index, Nota nuevaNota) {
         if (index >= 0 && index < notas.size()) {
-            notas.set(index, nuevaEstudiante);
+            notas.set(index, nuevaNota);
             guardarDatos();
         } else {
             System.out.println("Índice no válido");

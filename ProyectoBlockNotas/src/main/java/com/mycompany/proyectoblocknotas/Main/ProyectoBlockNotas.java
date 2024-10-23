@@ -6,7 +6,8 @@ package com.mycompany.proyectoblocknotas.Main;
 
 /**
  *
- * @author Usuario
+ * @author Usuario 
+ * Britany
  */
 public class ProyectoBlockNotas {
 

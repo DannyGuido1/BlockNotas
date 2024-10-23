@@ -73,7 +73,7 @@ public class ControladorNota {
     }
 
     // Borrar
-    public void borrarEstudiante(int index) {
+    public void borrarNotas(int index) {
         if (index >= 0 && index < notas.size()) {
             notas.remove(index);
             guardarDatos();

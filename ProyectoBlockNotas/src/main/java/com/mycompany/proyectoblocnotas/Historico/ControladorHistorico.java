@@ -52,9 +52,6 @@ public class ControladorHistorico {
     }
 
 
-   
-    
-
     private void guardarDatos() {
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FILE_NAME))) {
             oos.writeObject(notas);

@@ -83,7 +83,7 @@ public class ControladorUsuario {
     
  
 //AGREGUE EL INICIO DE SESION, VERIFICAR CON EL PROFE
-public void inicioSesion(Usuario nuevoUsuario) {
+public boolean inicioSesion(Usuario nuevoUsuario) {
     boolean encontrado = false;
     
     for (Usuario usuario : usuarios) {
@@ -98,6 +98,7 @@ public void inicioSesion(Usuario nuevoUsuario) {
     if (!encontrado) {
         System.out.println("El usuario o la contraseña no coinciden");
 }
+    return encontrado;
 }
         
 

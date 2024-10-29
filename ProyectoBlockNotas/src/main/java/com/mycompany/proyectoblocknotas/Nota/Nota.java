@@ -18,56 +18,61 @@ public class Nota {
     private String contenido;
     private LocalDate FechaCreacion;
     private int numeroNota;
-    
-    
+    private int idcategoria;
+    private LocalDate FechaCaducidad;
 
-    public Nota(String contenido, LocalDateTime horaCreacion, int numeroNota) {
+    public Nota(String contenido, LocalDate FechaCreacion, int numeroNota, int idcategoria, LocalDate FechaCaducidad) {
         this.contenido = contenido;
-        this.FechaCreacion = LocalDate.now();
+        this.FechaCreacion = FechaCreacion;
         this.numeroNota = numeroNota;
+        this.idcategoria = idcategoria;
+        this.FechaCaducidad = FechaCaducidad;
     }
 
-    /**
-     * @return the contenido
-     */
     public String getContenido() {
         return contenido;
     }
 
-    /**
-     * @param contenido the contenido to set
-     */
     public void setContenido(String contenido) {
         this.contenido = contenido;
     }
 
-    /**
-     * @return the FechaCreacion
-     */
     public LocalDate getFechaCreacion() {
         return FechaCreacion;
     }
 
-    /**
-     * @param FechaCreacion the FechaCreacion to set
-     */
     public void setFechaCreacion(LocalDate FechaCreacion) {
         this.FechaCreacion = FechaCreacion;
     }
 
-    /**
-     * @return the numeroNota
-     */
     public int getNumeroNota() {
         return numeroNota;
     }
 
-    /**
-     * @param numeroNota the numeroNota to set
-     */
     public void setNumeroNota(int numeroNota) {
         this.numeroNota = numeroNota;
     }
+
+    public int getIdcategoria() {
+        return idcategoria;
+    }
+
+    public void setIdcategoria(int idcategoria) {
+        this.idcategoria = idcategoria;
+    }
+
+    public LocalDate getFechaCaducidad() {
+        return FechaCaducidad;
+    }
+
+    public void setFechaCaducidad(LocalDate FechaCaducidad) {
+        this.FechaCaducidad = FechaCaducidad;
+    }
+
+    
+    
+
+    
     
     
     

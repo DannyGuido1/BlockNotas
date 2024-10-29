@@ -4,7 +4,9 @@
  */
 package com.mycompany.proyectoblocknotas.Nota;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 /**
  *
@@ -14,12 +16,14 @@ public class Nota {
     
     
     private String contenido;
-    private LocalDateTime horaCreacion;
+    private LocalDate FechaCreacion;
     private int numeroNota;
+    
+    
 
     public Nota(String contenido, LocalDateTime horaCreacion, int numeroNota) {
         this.contenido = contenido;
-        this.horaCreacion = LocalDateTime.now();
+        this.FechaCreacion = LocalDate.now();
         this.numeroNota = numeroNota;
     }
 
@@ -38,17 +42,17 @@ public class Nota {
     }
 
     /**
-     * @return the horaCreacion
+     * @return the FechaCreacion
      */
-    public LocalDateTime getHoraCreacion() {
-        return horaCreacion;
+    public LocalDate getFechaCreacion() {
+        return FechaCreacion;
     }
 
     /**
-     * @param horaCreacion the horaCreacion to set
+     * @param FechaCreacion the FechaCreacion to set
      */
-    public void setHoraCreacion(LocalDateTime horaCreacion) {
-        this.horaCreacion = horaCreacion;
+    public void setFechaCreacion(LocalDate FechaCreacion) {
+        this.FechaCreacion = FechaCreacion;
     }
 
     /**

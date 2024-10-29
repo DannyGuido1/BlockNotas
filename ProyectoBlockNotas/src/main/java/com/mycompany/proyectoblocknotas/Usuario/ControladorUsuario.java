@@ -30,6 +30,7 @@ public class ControladorUsuario {
             usuarios = (List<Usuario>) ois.readObject();
         } catch (FileNotFoundException e) {
             System.out.println("Archivo no encontrado, se creará uno nuevo.");
+            usuarios=new ArrayList<>();
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
             
@@ -79,5 +80,44 @@ public class ControladorUsuario {
             e.printStackTrace();
         }
     }
+    
+ 
+//AGREGUE EL INICIO DE SESION, VERIFICAR CON EL PROFE
+public void inicioSesion(Usuario nuevoUsuario) {
+    boolean encontrado = false;
+    
+    for (Usuario usuario : usuarios) {
+        if (usuario.getNombre().equals(nuevoUsuario.getNombre()) &&
+            usuario.getContrasenna().equals(nuevoUsuario.getContrasenna())) {
+            System.out.println("Accediendo");
+            encontrado = true;
+            break;
+        }
+    }
+    
+    if (!encontrado) {
+        System.out.println("El usuario o la contraseña no coinciden");
 }
+}
+        
+
+//RECORDATORIO PARA MI PREGUNTAR COMO BUSCAR DESDE EL ARCHIVO PLANO EN VEZ DE LA LISTA
+
+public void buscarUsuarioPorNombre(String nombre) {
+    for (Usuario usuario : usuarios) {
+        if (usuario.getNombre().equals(nombre)) {
+            System.out.println("Usuario encontrado:");
+            System.out.println("Nombre: " + usuario.getNombre());
+            System.out.println("Contraseña: " + usuario.getContrasenna()); 
+            return; 
+        }
+       }
+    
+    System.out.println("No se encontró un usuario con ese nombre.");
+}
+
+
+    }
+    
+
     

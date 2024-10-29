@@ -10,20 +10,20 @@ package com.mycompany.proyectoblocnotas.Categorias;
  */
 public class Categoria {
     
-    private String competados;
+    private String completados;
     private String pendiente;
 
     public Categoria(String competados, String pendiente) {
-        this.competados = competados;
+        this.completados = competados;
         this.pendiente = pendiente;
     }
 
-    public String getCompetados() {
-        return competados;
+    public String getCompletados() {
+        return completados;
     }
 
-    public void setCompetados(String competados) {
-        this.competados = competados;
+    public void setCompletados(String completados) {
+        this.completados = completados;
     }
 
     public String getPendiente() {

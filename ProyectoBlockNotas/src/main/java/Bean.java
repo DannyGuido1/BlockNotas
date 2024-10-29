@@ -12,9 +12,9 @@ import java.io.Serializable;
  */
 public class Bean implements Serializable {
     
-    public static final String PROP_SAMPLE_PROPERTY = "sampleProperty";
+    public static final String PROP_SAMPLE_PROPERTY = "userName";
     
-    private String sampleProperty;
+    private String userName;
     
     private PropertyChangeSupport propertySupport;
     
@@ -23,13 +23,13 @@ public class Bean implements Serializable {
     }
     
     public String getSampleProperty() {
-        return sampleProperty;
+        return userName;
     }
     
     public void setSampleProperty(String value) {
-        String oldValue = sampleProperty;
-        sampleProperty = value;
-        propertySupport.firePropertyChange(PROP_SAMPLE_PROPERTY, oldValue, sampleProperty);
+        String oldValue = userName;
+        userName = value;
+        propertySupport.firePropertyChange(PROP_SAMPLE_PROPERTY, oldValue, userName);
     }
     
     public void addPropertyChangeListener(PropertyChangeListener listener) {

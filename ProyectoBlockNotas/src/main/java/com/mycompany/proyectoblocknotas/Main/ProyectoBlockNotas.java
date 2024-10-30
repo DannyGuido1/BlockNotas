@@ -4,6 +4,8 @@
 
 package com.mycompany.proyectoblocknotas.Main;
 
+import Pantallas.FrameDashboard;
+
 /**
  *
  * @author Usuario 
@@ -12,6 +14,7 @@ package com.mycompany.proyectoblocknotas.Main;
 public class ProyectoBlockNotas {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        FrameDashboard historicopantalla = new FrameDashboard();
+        historicopantalla.setVisible(true);
     }
 }

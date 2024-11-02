@@ -23,7 +23,10 @@ public class ControladorCategoria {
     private static final String FILE_NAME ="categoria.dat";
     private List<Categoria> categorias;
     
-    
+    public ControladorCategoria()
+    {
+        categorias = new ArrayList<>();
+    }
     private void cargarDatos() {
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(FILE_NAME))) {
             categorias = (List<Categoria>) ois.readObject();
@@ -43,7 +46,7 @@ public class ControladorCategoria {
      
       // Crear
     public void agregarCayegoria(Categoria categoria) {
-        categoria.add(categoria);
+        categorias.add(categoria);
         guardarDatos();
         
     }

@@ -5,8 +5,11 @@
 package Pantallas;
 
 import com.mycompany.proyectoblocknotas.Nota.Nota;
+import com.mycompany.proyectoblocnotas.Categorias.Categoria;
+import com.mycompany.proyectoblocnotas.Categorias.ControladorCategoria;
 import com.mycompany.proyectoblocnotas.Historico.ControladorHistorico;
 import java.util.List;
+import java.util.Optional;
 
 /**
  *
@@ -24,14 +27,22 @@ public class JpHistorico extends javax.swing.JPanel {
     
     public void CargaDatos(){
         ControladorHistorico h = new ControladorHistorico();
+        ControladorCategoria c = new ControladorCategoria();
+        List<Categoria> listCat = c.obtenerCategorias();
         List <Nota> hist = h.obtenerNotas();
         jtHistorico = new javax.swing.JTable();
 
         jtHistorico.setAutoCreateRowSorter(true);
 
         Object [][] v = new Object[WIDTH][WIDTH];
+        int cont = 0;
         for (Nota nota : hist) {
-            //v[0][0] = {}
+            v[cont][0] = nota.getContenido();
+            v[cont][1] = nota.getFechaCreacion();
+            Optional<Categoria> cat = listCat.stream().filter(e->e.getId()==nota.getIdcategoria()).findFirst();
+            
+            v[cont][2] = cat.get().getNombre();
+            cont++;
         }
         /*
            new Object [][] {
@@ -44,7 +55,7 @@ public class JpHistorico extends javax.swing.JPanel {
         jtHistorico.setModel(new javax.swing.table.DefaultTableModel(
              v,
             new String [] {
-                "Nombre", "Descripcion", "Fecha Crecion", "Cataegoria"
+                "Contenido", "Fecha Crecion", "Cataegoria"
             }
         ));
 

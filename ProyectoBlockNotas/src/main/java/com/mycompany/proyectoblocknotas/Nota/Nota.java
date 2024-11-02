@@ -4,6 +4,7 @@
  */
 package com.mycompany.proyectoblocknotas.Nota;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Date;
@@ -12,7 +13,7 @@ import java.util.Date;
  *
  * @author Usuario
  */
-public class Nota {
+public class Nota implements Serializable{
     
     
     private String contenido;

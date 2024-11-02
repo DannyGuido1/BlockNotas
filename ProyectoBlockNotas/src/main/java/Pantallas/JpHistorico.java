@@ -38,7 +38,7 @@ public class JpHistorico extends javax.swing.JPanel {
         int cont = 0;
         for (Nota nota : hist) {
             v[cont][0] = nota.getContenido();
-            v[cont][1] = nota.getFechaCreacion();
+            v[cont][1] = nota.getFechaCreacion().toString();
             Optional<Categoria> cat = listCat.stream().filter(e->e.getId()==nota.getIdcategoria()).findFirst();
             
             v[cont][2] = cat.get().getNombre();

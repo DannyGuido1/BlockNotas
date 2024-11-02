@@ -21,9 +21,18 @@ import java.util.List;
  * @author jerem
  */
 public class ControladorHistorico {
+
+   
+    
+    
     
     private static final String FILE_NAME ="historico.dat";
     private List<Nota> notas;
+    
+    public ControladorHistorico() {
+        notas = new ArrayList<>();
+        cargarDatos();
+    }
     
      private void cargarDatos() {
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(FILE_NAME))) {
@@ -35,10 +44,7 @@ public class ControladorHistorico {
         }
     }
     
-     public void NotasController() {
-        notas = new ArrayList<>();
-        cargarDatos();
-    }
+
 
     // Crear
     public void agregarNota(Nota nota) {

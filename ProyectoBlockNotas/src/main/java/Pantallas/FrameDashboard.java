@@ -30,6 +30,7 @@ public class FrameDashboard extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+<<<<<<< Updated upstream
         jMenuBar1 = new javax.swing.JMenuBar();
         JmMantenimiento = new javax.swing.JMenu();
         JmHistorico = new javax.swing.JMenuItem();
@@ -46,6 +47,36 @@ public class FrameDashboard extends javax.swing.JFrame {
             }
         });
         JmMantenimiento.add(JmHistorico);
+=======
+        jSeparator1 = new javax.swing.JSeparator();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tbHistorico = new javax.swing.JTable();
+        lblhistorico = new javax.swing.JLabel();
+        cBoxCompletadas = new javax.swing.JComboBox<>();
+        cBoxPendientes = new javax.swing.JComboBox<>();
+        cBoxProceso = new javax.swing.JComboBox<>();
+        lblCompletadas = new javax.swing.JLabel();
+        lblPendientes = new javax.swing.JLabel();
+        lblProceso = new javax.swing.JLabel();
+        btnCrear = new javax.swing.JButton();
+        btnBuscar = new javax.swing.JButton();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        tbHistorico.setAutoCreateRowSorter(true);
+        tbHistorico.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(tbHistorico);
+>>>>>>> Stashed changes
 
         jMenuBar1.add(JmMantenimiento);
 
@@ -111,9 +142,24 @@ public class FrameDashboard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+<<<<<<< Updated upstream
     private javax.swing.JMenuItem JmHistorico;
     private javax.swing.JMenu JmMantenimiento;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
+=======
+    private javax.swing.JButton btnBuscar;
+    private javax.swing.JButton btnCrear;
+    private javax.swing.JComboBox<String> cBoxCompletadas;
+    private javax.swing.JComboBox<String> cBoxPendientes;
+    private javax.swing.JComboBox<String> cBoxProceso;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JLabel lblCompletadas;
+    private javax.swing.JLabel lblPendientes;
+    private javax.swing.JLabel lblProceso;
+    private javax.swing.JLabel lblhistorico;
+    private javax.swing.JTable tbHistorico;
+>>>>>>> Stashed changes
     // End of variables declaration//GEN-END:variables
 }

@@ -4,6 +4,9 @@
  */
 package Pantallas;
 
+import com.mycompany.proyectoblocknotas.Usuario.ControladorUsuario;
+import com.mycompany.proyectoblocknotas.Usuario.Usuario;
+
 /**
  *
  * @author Usuario
@@ -53,6 +56,11 @@ public class FrameInicioSesion extends javax.swing.JFrame {
         jLabel1.setText("jLabel1");
 
         btnInicioSesion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pantallas/Imagen2.png"))); // NOI18N
+        btnInicioSesion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInicioSesionActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -107,6 +115,19 @@ public class FrameInicioSesion extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnInicioSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInicioSesionActionPerformed
+        ControladorUsuario control= new ControladorUsuario();
+        String nombre =txtUsuario.getText();
+        String contrasenna= txtContrasenna.getText();
+        
+        
+        Usuario usuario= new Usuario(nombre,0,contrasenna);
+        
+        control.inicioSesion(usuario);
+
+// TODO add your handling code here:
+    }//GEN-LAST:event_btnInicioSesionActionPerformed
 
     /**
      * @param args the command line arguments

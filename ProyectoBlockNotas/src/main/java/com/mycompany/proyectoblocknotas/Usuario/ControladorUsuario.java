@@ -84,6 +84,7 @@ public class ControladorUsuario {
  
 //AGREGUE EL INICIO DE SESION, VERIFICAR CON EL PROFE
 public boolean inicioSesion(Usuario nuevoUsuario) {
+    
     boolean encontrado = false;
     
     for (Usuario usuario : usuarios) {

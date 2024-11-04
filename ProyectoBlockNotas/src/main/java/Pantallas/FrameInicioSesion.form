@@ -142,6 +142,9 @@
           <Image iconType="3" name="/Pantallas/Imagen2.png"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnInicioSesionActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

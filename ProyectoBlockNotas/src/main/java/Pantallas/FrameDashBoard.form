@@ -18,7 +18,6 @@
             <MenuItem class="javax.swing.JMenuItem" name="CBMenu">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Menu"/>
-                <Property name="actionCommand" type="java.lang.String" value="Menu"/>
               </Properties>
             </MenuItem>
             <MenuItem class="javax.swing.JCheckBoxMenuItem" name="jcbHistorico">

@@ -77,6 +77,17 @@ public class FrameDashBoard extends javax.swing.JFrame {
     private void jcbHistoricoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbHistoricoActionPerformed
        JpHistorico jp1= new JpHistorico();
        jp1.setVisible(true);
+
+this.add(jp1);
+
+        // Ajustar el tamaño del JFrame al tamaño preferido del JPanel
+        this.pack();
+
+        // Establecer la operación de cierre del JFrame
+        this.setDefaultCloseOperation(this.EXIT_ON_CLOSE);
+
+        // Hacer visible el JFrame
+        this.setVisible(true);
         
 
 

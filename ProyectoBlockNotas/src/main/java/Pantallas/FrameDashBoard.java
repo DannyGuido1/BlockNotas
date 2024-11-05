@@ -41,11 +41,6 @@ public class FrameDashBoard extends javax.swing.JFrame {
         MenuBar.setText("File");
 
         CBMenu.setText("Menu");
-        CBMenu.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                CBMenuMouseClicked(evt);
-            }
-        });
         CBMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CBMenuActionPerformed(evt);
@@ -55,8 +50,8 @@ public class FrameDashBoard extends javax.swing.JFrame {
 
         JMHistorico.setText("Historico");
         JMHistorico.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                JMHistoricoMouseClicked(evt);
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                JMHistoricoMousePressed(evt);
             }
         });
         MenuBar.add(JMHistorico);
@@ -84,24 +79,15 @@ public class FrameDashBoard extends javax.swing.JFrame {
 
     private void CBMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CBMenuActionPerformed
         // TODO add your handling code here:
-        JpHistorico jp1= new JpHistorico();
 
-        this.setContentPane(jp1);
-        jp1.setVisible(true);
     }//GEN-LAST:event_CBMenuActionPerformed
 
-    private void CBMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CBMenuMouseClicked
-
-    }//GEN-LAST:event_CBMenuMouseClicked
-
-    private void JMHistoricoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JMHistoricoMouseClicked
+    private void JMHistoricoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JMHistoricoMousePressed
         // TODO add your handling code here:
-               JpHistorico jp1= new JpHistorico();
-      
-       
-       this.setContentPane(jp1);
-       jp1.setVisible(true);
-    }//GEN-LAST:event_JMHistoricoMouseClicked
+        JpHistorico historico = new JpHistorico();
+        this.setContentPane(historico);
+        historico.setVisible(true);
+    }//GEN-LAST:event_JMHistoricoMousePressed
 
     /**
      * @param args the command line arguments

@@ -16,7 +16,7 @@ import java.util.Optional;
  *
  * @author jerem
  */
-public class JpHistorico extends javax.swing.JPanel {
+public final class JpHistorico extends javax.swing.JPanel {
     
    ControladorNota controlNota=new ControladorNota();
     
@@ -41,14 +41,17 @@ public class JpHistorico extends javax.swing.JPanel {
 
         jtHistorico.setAutoCreateRowSorter(true);
 
-        Object [][] v = new Object[WIDTH][WIDTH];
+        Object [][] v = new Object[hist.size()][2];
         int cont = 0;
         for (Nota nota : hist) {
             v[cont][0] = nota.getContenido();
             v[cont][1] = nota.getFechaCreacion().toString();
             Optional<Categoria> cat = listCat.stream().filter(e->e.getId()==nota.getIdcategoria()).findFirst();
-            
-            v[cont][2] = cat.get().getNombre();
+            if(!cat.isEmpty())
+            {
+                v[cont][2] = cat.get().getNombre();
+            }
+            v[cont][2] = "N/A";
             cont++;
         }
         /*

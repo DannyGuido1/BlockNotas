@@ -19,6 +19,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Menu"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="CBMenuMouseClicked"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JCheckBoxMenuItem" name="jcbHistorico">
               <Properties>

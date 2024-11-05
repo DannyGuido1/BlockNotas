@@ -41,7 +41,11 @@ public class FrameDashBoard extends javax.swing.JFrame {
         MenuBar.setText("File");
 
         CBMenu.setText("Menu");
-        CBMenu.setActionCommand("Menu");
+        CBMenu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CBMenuMouseClicked(evt);
+            }
+        });
         MenuBar.add(CBMenu);
 
         jcbHistorico.setSelected(true);
@@ -97,6 +101,14 @@ public class FrameDashBoard extends javax.swing.JFrame {
 
 // TODO add your handling code here:
     }//GEN-LAST:event_jcbHistoricoActionPerformed
+
+    private void CBMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CBMenuMouseClicked
+        JpHistorico jp1= new JpHistorico();
+      
+       
+       this.setContentPane(jp1);
+       jp1.setVisible(true);
+    }//GEN-LAST:event_CBMenuMouseClicked
 
     /**
      * @param args the command line arguments

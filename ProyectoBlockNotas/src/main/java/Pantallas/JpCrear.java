@@ -128,7 +128,7 @@ public class JpCrear extends javax.swing.JPanel {
     Nota notaNueva =new Nota(jTextArea1.getText(),1,fecha);
 
     controlNota.agregarNota(notaNueva);
-
+    jTextArea1.setText("");
         // TODO add your handling code here:
     }//GEN-LAST:event_btnGuardarActionPerformed
 

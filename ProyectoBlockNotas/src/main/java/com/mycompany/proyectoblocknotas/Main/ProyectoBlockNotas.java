@@ -22,6 +22,7 @@ public class ProyectoBlockNotas {
         FrameDashBoard historicopantalla = new FrameDashBoard();
         historicopantalla.setVisible(true);
         
+        
         ControladorHistorico h =  new ControladorHistorico();
         
         Nota n = new Nota("Practica", 1, LocalDate.now());

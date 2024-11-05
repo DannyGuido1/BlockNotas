@@ -4,6 +4,7 @@
  */
 package Pantallas;
 
+import com.mycompany.proyectoblocknotas.Nota.ControladorNota;
 import com.mycompany.proyectoblocknotas.Nota.Nota;
 import com.mycompany.proyectoblocnotas.Categorias.Categoria;
 import com.mycompany.proyectoblocnotas.Categorias.ControladorCategoria;
@@ -16,7 +17,13 @@ import java.util.Optional;
  * @author jerem
  */
 public class JpHistorico extends javax.swing.JPanel {
-
+    
+   ControladorNota controlNota=new ControladorNota();
+    
+    
+    
+    
+    
     /**
      * Creates new form JpHistorico
      */
@@ -87,6 +94,11 @@ public class JpHistorico extends javax.swing.JPanel {
         lblProceso.setToolTipText("");
 
         btnCrear.setText("Crear");
+        btnCrear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCrearActionPerformed(evt);
+            }
+        });
 
         btnBuscar.setText("Buscar");
 
@@ -184,6 +196,13 @@ public class JpHistorico extends javax.swing.JPanel {
     private void jFormattedTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextField2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jFormattedTextField2ActionPerformed
+
+    private void btnCrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearActionPerformed
+        JpCrear jp1 = new JpCrear();
+        jp1.setVisible(true);
+
+// TODO add your handling code here:
+    }//GEN-LAST:event_btnCrearActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

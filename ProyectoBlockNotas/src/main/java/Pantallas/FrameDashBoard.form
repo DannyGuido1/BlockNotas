@@ -14,9 +14,6 @@
                 <Property name="text" type="java.lang.String" value="Menu"/>
                 <Property name="actionCommand" type="java.lang.String" value="Menu"/>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CBMenuActionPerformed"/>
-              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>

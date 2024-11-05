@@ -37,11 +37,6 @@ public class FrameDashBoard extends javax.swing.JFrame {
 
         CBMenu.setText("Menu");
         CBMenu.setActionCommand("Menu");
-        CBMenu.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CBMenuActionPerformed(evt);
-            }
-        });
         MenuBar.add(CBMenu);
 
         jMenuBar1.add(MenuBar);
@@ -64,12 +59,6 @@ public class FrameDashBoard extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void CBMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CBMenuActionPerformed
-     JpHistorico panelHistorico;
-     panelHistorico.setVisible(true);
-// TODO add your handling code here:
-    }//GEN-LAST:event_CBMenuActionPerformed
 
     /**
      * @param args the command line arguments

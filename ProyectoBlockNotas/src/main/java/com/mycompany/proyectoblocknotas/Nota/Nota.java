@@ -6,8 +6,7 @@ package com.mycompany.proyectoblocknotas.Nota;
 
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.Date;
+
 
 /**
  *
@@ -22,10 +21,10 @@ public class Nota implements Serializable{
     private int idcategoria;
     private LocalDate FechaCaducidad;
 
-    public Nota(String contenido, LocalDate FechaCreacion, int numeroNota, int idcategoria, LocalDate FechaCaducidad) {
+    public Nota(String contenido, int idcategoria, LocalDate FechaCaducidad) {
         this.contenido = contenido;
-        this.FechaCreacion = FechaCreacion;
-        this.numeroNota = numeroNota;
+        this.FechaCreacion = LocalDate.now();
+        this.numeroNota = (int) Math.random();
         this.idcategoria = idcategoria;
         this.FechaCaducidad = FechaCaducidad;
     }

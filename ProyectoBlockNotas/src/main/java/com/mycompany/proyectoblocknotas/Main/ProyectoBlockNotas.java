@@ -4,7 +4,7 @@
 
 package com.mycompany.proyectoblocknotas.Main;
 
-import Pantallas.FrameDashboard;
+import Pantallas.FrameDashBoard;
 import com.mycompany.proyectoblocknotas.Nota.Nota;
 import com.mycompany.proyectoblocnotas.Categorias.Categoria;
 import com.mycompany.proyectoblocnotas.Categorias.ControladorCategoria;
@@ -19,7 +19,7 @@ import java.time.LocalDate;
 public class ProyectoBlockNotas {
 
     public static void main(String[] args) {
-        FrameDashboard historicopantalla = new FrameDashboard();
+        FrameDashBoard historicopantalla = new FrameDashBoard();
         historicopantalla.setVisible(true);
         
         ControladorHistorico h =  new ControladorHistorico();

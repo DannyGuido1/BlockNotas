@@ -30,7 +30,7 @@ public class FrameDashBoard extends javax.swing.JFrame {
         MenuMantenimiento = new javax.swing.JMenuBar();
         MenuBar = new javax.swing.JMenu();
         CBMenu = new javax.swing.JMenuItem();
-        jcbHistorico = new javax.swing.JCheckBoxMenuItem();
+        JMHistorico = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
 
         jCheckBoxMenuItem1.setSelected(true);
@@ -46,16 +46,20 @@ public class FrameDashBoard extends javax.swing.JFrame {
                 CBMenuMouseClicked(evt);
             }
         });
-        MenuBar.add(CBMenu);
-
-        jcbHistorico.setSelected(true);
-        jcbHistorico.setText("Historico");
-        jcbHistorico.addActionListener(new java.awt.event.ActionListener() {
+        CBMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jcbHistoricoActionPerformed(evt);
+                CBMenuActionPerformed(evt);
             }
         });
-        MenuBar.add(jcbHistorico);
+        MenuBar.add(CBMenu);
+
+        JMHistorico.setText("Historico");
+        JMHistorico.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JMHistoricoMouseClicked(evt);
+            }
+        });
+        MenuBar.add(JMHistorico);
 
         MenuMantenimiento.add(MenuBar);
 
@@ -78,37 +82,26 @@ public class FrameDashBoard extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jcbHistoricoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbHistoricoActionPerformed
-       JpHistorico jp1= new JpHistorico();
-      
-       
-       this.setContentPane(jp1);
-       jp1.setVisible(true);
-//
-//this.add(jp1);
-//
-//        // Ajustar el tamaño del JFrame al tamaño preferido del JPanel
-//        this.pack();
-//
-//        // Establecer la operación de cierre del JFrame
-//        this.setDefaultCloseOperation(this.EXIT_ON_CLOSE);
-//
-//        // Hacer visible el JFrame
-//        this.setVisible(true);
-//        
-// jp1.setVisible(true);
+    private void CBMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CBMenuActionPerformed
+        // TODO add your handling code here:
+        JpHistorico jp1= new JpHistorico();
 
-
-// TODO add your handling code here:
-    }//GEN-LAST:event_jcbHistoricoActionPerformed
+        this.setContentPane(jp1);
+        jp1.setVisible(true);
+    }//GEN-LAST:event_CBMenuActionPerformed
 
     private void CBMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CBMenuMouseClicked
-        JpHistorico jp1= new JpHistorico();
+
+    }//GEN-LAST:event_CBMenuMouseClicked
+
+    private void JMHistoricoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JMHistoricoMouseClicked
+        // TODO add your handling code here:
+               JpHistorico jp1= new JpHistorico();
       
        
        this.setContentPane(jp1);
        jp1.setVisible(true);
-    }//GEN-LAST:event_CBMenuMouseClicked
+    }//GEN-LAST:event_JMHistoricoMouseClicked
 
     /**
      * @param args the command line arguments
@@ -147,10 +140,10 @@ public class FrameDashBoard extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem CBMenu;
+    private javax.swing.JMenuItem JMHistorico;
     private javax.swing.JMenu MenuBar;
     private javax.swing.JMenuBar MenuMantenimiento;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
     private javax.swing.JMenu jMenu2;
-    private javax.swing.JCheckBoxMenuItem jcbHistorico;
     // End of variables declaration//GEN-END:variables
 }

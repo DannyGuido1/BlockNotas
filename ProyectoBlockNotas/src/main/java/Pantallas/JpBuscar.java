@@ -42,7 +42,7 @@ public class JpBuscar extends javax.swing.JPanel {
         });
 
         jLabel2.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        jLabel2.setText("Digite el Id de la nota");
+        jLabel2.setText("Digite el nombre de la nota");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

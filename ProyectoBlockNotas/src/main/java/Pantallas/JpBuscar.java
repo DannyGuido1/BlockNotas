@@ -79,6 +79,9 @@ public class JpBuscar extends javax.swing.JPanel {
 
     private void JBVerificarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JBVerificarMouseClicked
         // TODO add your handling code here:
+        
+        
+        
     }//GEN-LAST:event_JBVerificarMouseClicked
 
 

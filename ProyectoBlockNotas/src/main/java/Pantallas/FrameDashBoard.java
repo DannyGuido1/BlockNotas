@@ -66,7 +66,9 @@ public class FrameDashBoard extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void CBMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CBMenuActionPerformed
-        // TODO add your handling code here:
+     JpHistorico panelHistorico;
+     panelHistorico.setVisible(true);
+// TODO add your handling code here:
     }//GEN-LAST:event_CBMenuActionPerformed
 
     /**

@@ -37,11 +37,6 @@ public class FrameDashBoard extends javax.swing.JFrame {
 
         CBMenu.setText("Menu");
         CBMenu.setActionCommand("Menu");
-        CBMenu.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CBMenuActionPerformed(evt);
-            }
-        });
         MenuBar.add(CBMenu);
 
         jMenuBar1.add(MenuBar);

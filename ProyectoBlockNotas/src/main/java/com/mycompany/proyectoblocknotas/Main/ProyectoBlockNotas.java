@@ -24,9 +24,9 @@ public class ProyectoBlockNotas {
         
         ControladorHistorico h =  new ControladorHistorico();
         
-        Nota n = new Nota("Practica", LocalDate.MIN, 0, 1, LocalDate.EPOCH);
-        Nota n1 = new Nota("Practica2", LocalDate.MIN, 0, 2, LocalDate.EPOCH);
-        Nota n2 = new Nota("Practica3", LocalDate.MIN, 0, 3, LocalDate.EPOCH);
+        Nota n = new Nota("Practica", 1, LocalDate.now());
+        Nota n1 = new Nota("Practica2",2,LocalDate.now());
+        Nota n2 = new Nota("Practica3",1, LocalDate.now());
         
         Categoria c = new Categoria(1, "Pendiente");
         Categoria c2 = new Categoria(2, "Proceso");

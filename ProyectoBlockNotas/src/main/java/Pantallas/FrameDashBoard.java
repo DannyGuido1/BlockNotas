@@ -26,10 +26,15 @@ public class FrameDashBoard extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jMenuBar1 = new javax.swing.JMenuBar();
+        jCheckBoxMenuItem1 = new javax.swing.JCheckBoxMenuItem();
+        MenuMantenimiento = new javax.swing.JMenuBar();
         MenuBar = new javax.swing.JMenu();
         CBMenu = new javax.swing.JMenuItem();
+        jcbHistorico = new javax.swing.JCheckBoxMenuItem();
         jMenu2 = new javax.swing.JMenu();
+
+        jCheckBoxMenuItem1.setSelected(true);
+        jCheckBoxMenuItem1.setText("jCheckBoxMenuItem1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -39,12 +44,21 @@ public class FrameDashBoard extends javax.swing.JFrame {
         CBMenu.setActionCommand("Menu");
         MenuBar.add(CBMenu);
 
-        jMenuBar1.add(MenuBar);
+        jcbHistorico.setSelected(true);
+        jcbHistorico.setText("Historico");
+        jcbHistorico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcbHistoricoActionPerformed(evt);
+            }
+        });
+        MenuBar.add(jcbHistorico);
+
+        MenuMantenimiento.add(MenuBar);
 
         jMenu2.setText("Edit");
-        jMenuBar1.add(jMenu2);
+        MenuMantenimiento.add(jMenu2);
 
-        setJMenuBar(jMenuBar1);
+        setJMenuBar(MenuMantenimiento);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -59,6 +73,16 @@ public class FrameDashBoard extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jcbHistoricoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbHistoricoActionPerformed
+       JpHistorico jp1= new JpHistorico();
+       jp1.setVisible(true);
+        
+
+
+
+// TODO add your handling code here:
+    }//GEN-LAST:event_jcbHistoricoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -98,7 +122,9 @@ public class FrameDashBoard extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem CBMenu;
     private javax.swing.JMenu MenuBar;
+    private javax.swing.JMenuBar MenuMantenimiento;
+    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
     private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JCheckBoxMenuItem jcbHistorico;
     // End of variables declaration//GEN-END:variables
 }

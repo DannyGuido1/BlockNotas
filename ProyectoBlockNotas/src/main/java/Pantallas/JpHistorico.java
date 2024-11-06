@@ -44,7 +44,7 @@ public final class JpHistorico extends javax.swing.JPanel {
 
         jtHistorico.setAutoCreateRowSorter(true);
 
-        Object [][] v = new Object[hist.size()][2];
+        Object [][] v = new Object[hist.size()][3];
         int cont = 0;
         for (Nota nota : hist) {
             v[cont][0] = nota.getContenido();
@@ -84,23 +84,15 @@ public final class JpHistorico extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lblProceso = new javax.swing.JLabel();
         btnCrear = new javax.swing.JButton();
         btnBuscar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jtHistorico = new javax.swing.JTable();
         lblhistorico = new javax.swing.JLabel();
-        cBoxProceso = new javax.swing.JComboBox<>();
-        lblCompletadas = new javax.swing.JLabel();
-        lblPendientes = new javax.swing.JLabel();
-        CBPendientes = new javax.swing.JComboBox<>();
-        CBCompletadas = new javax.swing.JComboBox<>();
-        btnCargarCompletadas = new javax.swing.JButton();
-        btnCargarPendientes = new javax.swing.JButton();
-        btnCargarProceso = new javax.swing.JButton();
-
-        lblProceso.setText("En proceso");
-        lblProceso.setToolTipText("");
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        txtFechaInicio = new javax.swing.JFormattedTextField();
+        txtFechaFin = new javax.swing.JFormattedTextField();
 
         btnCrear.setText("Crear");
         btnCrear.addActionListener(new java.awt.event.ActionListener() {
@@ -128,26 +120,15 @@ public final class JpHistorico extends javax.swing.JPanel {
         lblhistorico.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblhistorico.setText("Historico");
 
-        cBoxProceso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jLabel1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        jLabel1.setText("Fecha de Inicio");
 
-        lblCompletadas.setText("Completadas");
+        jLabel2.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        jLabel2.setText("Fecha fin");
 
-        lblPendientes.setText("Pendientes");
+        txtFechaInicio.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("dd MM yyyy"))));
 
-        CBPendientes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        CBCompletadas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        btnCargarCompletadas.setText("Cargar");
-        btnCargarCompletadas.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnCargarCompletadasMouseClicked(evt);
-            }
-        });
-
-        btnCargarPendientes.setText("Cargar");
-
-        btnCargarProceso.setText("Cargar");
+        txtFechaFin.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("dd MM yyyy"))));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -162,32 +143,20 @@ public final class JpHistorico extends javax.swing.JPanel {
                                 .addGap(272, 272, 272)
                                 .addComponent(lblhistorico))
                             .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel1)
+                                    .addComponent(txtFechaInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(53, 53, 53)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGap(6, 6, 6)
-                                        .addComponent(lblCompletadas, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addContainerGap()
-                                        .addComponent(CBCompletadas, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addContainerGap()
-                                        .addComponent(btnCargarCompletadas)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btnCargarPendientes)
-                                    .addComponent(CBPendientes, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblPendientes, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(cBoxProceso, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblProceso, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(btnCargarProceso)
-                                        .addGap(66, 66, 66)
+                                        .addComponent(jLabel2)
+                                        .addGap(286, 286, 286)
                                         .addComponent(btnCrear, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
-                                        .addComponent(btnBuscar)))))
-                        .addGap(0, 55, Short.MAX_VALUE)))
+                                        .addComponent(btnBuscar))
+                                    .addComponent(txtFechaFin, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -195,26 +164,16 @@ public final class JpHistorico extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(lblhistorico)
                 .addGap(16, 16, 16)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(btnCrear)
-                        .addComponent(btnBuscar))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblPendientes)
-                            .addComponent(lblCompletadas)
-                            .addComponent(lblProceso))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnCargarCompletadas)
-                            .addComponent(btnCargarPendientes)
-                            .addComponent(btnCargarProceso))))
-                .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(CBCompletadas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CBPendientes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cBoxProceso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 111, Short.MAX_VALUE)
+                    .addComponent(btnCrear)
+                    .addComponent(btnBuscar)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtFechaInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtFechaFin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 155, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -227,30 +186,16 @@ public final class JpHistorico extends javax.swing.JPanel {
 // TODO add your handling code here:
     }//GEN-LAST:event_btnCrearActionPerformed
 
-    private void btnCargarCompletadasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCargarCompletadasMouseClicked
-
-        
-        
-
-
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCargarCompletadasMouseClicked
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> CBCompletadas;
-    private javax.swing.JComboBox<String> CBPendientes;
     private javax.swing.JButton btnBuscar;
-    private javax.swing.JButton btnCargarCompletadas;
-    private javax.swing.JButton btnCargarPendientes;
-    private javax.swing.JButton btnCargarProceso;
     private javax.swing.JButton btnCrear;
-    private javax.swing.JComboBox<String> cBoxProceso;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jtHistorico;
-    private javax.swing.JLabel lblCompletadas;
-    private javax.swing.JLabel lblPendientes;
-    private javax.swing.JLabel lblProceso;
     private javax.swing.JLabel lblhistorico;
+    private javax.swing.JFormattedTextField txtFechaFin;
+    private javax.swing.JFormattedTextField txtFechaInicio;
     // End of variables declaration//GEN-END:variables
 }

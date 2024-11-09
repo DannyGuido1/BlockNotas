@@ -127,6 +127,11 @@ public final class JpHistorico extends javax.swing.JPanel {
         jLabel2.setText("Fecha fin");
 
         txtFechaInicio.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("dd MM yyyy"))));
+        txtFechaInicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtFechaInicioActionPerformed(evt);
+            }
+        });
 
         txtFechaFin.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("dd MM yyyy"))));
 
@@ -185,6 +190,10 @@ public final class JpHistorico extends javax.swing.JPanel {
 
 // TODO add your handling code here:
     }//GEN-LAST:event_btnCrearActionPerformed
+
+    private void txtFechaInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFechaInicioActionPerformed
+        // TODO add your handling code here:                
+    }//GEN-LAST:event_txtFechaInicioActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

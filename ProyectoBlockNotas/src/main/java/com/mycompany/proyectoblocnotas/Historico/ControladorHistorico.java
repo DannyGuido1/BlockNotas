@@ -98,9 +98,10 @@ public class ControladorHistorico {
         int cont = 0;
         List<Nota> hist = obtenerNotas();
         Object[][] hi = new Object[hist.size()][3];
-        Optional<Nota> fe = hist.stream().filter(e -> e.getFechaCreacion().isAfter(dFechaFin)&&e.getFechaCreacion().isAfter(dFechaInicio)).findFirst();
-        ArrayList<Nota> fe = optional.
-        for (Nota nota : fe) {
+        Optional<Nota> fe = hist.stream().filter(e -> e.getFechaCreacion().isAfter(dFechaFin)&&e.getFechaCreacion().isAfter(dFechaInicio)).findAny();
+// Convert Optional<Nota> to ArrayList<Nota> 
+        ArrayList<Nota> arrayList = fe.map(List::of) .map(ArrayList::new) .orElseGet(ArrayList::new);
+        for (Nota nota : arrayList) {
             hi[cont][0] = nota.getContenido();
             hi[cont][1] = nota.getFechaCreacion().toString();
             hi[cont][2] = nota.getFechaCaducidad().toString();
@@ -120,6 +121,7 @@ public class ControladorHistorico {
 //        Optional<Nota> fe = hist.stream().filter(e->e.getFechaCreacion() > e.getFechaCaducidad() && e.getFechaCreacion() < e.getFechaCaducidad()).findFirst();
         
           //codigo para despues poner y acordarse ( pasar un optional a arraylist y mostrarlo en la parte de historico comparando la fecha de inicio y fecha de fin un rangopara ver las notas en ese rango
+
 //          ArrayList<String> list = optional.map(value -> {
 //            ArrayList<String> newList = new ArrayList<>();
 //            newList.add(value);  // Agrega el valor dentro del Optional

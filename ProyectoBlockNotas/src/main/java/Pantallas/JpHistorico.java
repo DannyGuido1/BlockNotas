@@ -294,13 +294,6 @@ public class JpHistorico extends javax.swing.JPanel {
     
 //    //Metodo para obtener datos desde el archivo plano
 //    
-//   import java.io.BufferedReader;
-//import java.io.FileReader;
-//import java.io.IOException;
-//import java.util.ArrayList;
-//import java.util.HashMap;
-//import java.util.List;
-//import java.util.Map;
 //
 //public class ControladorNota {
 //
@@ -318,7 +311,7 @@ public class JpHistorico extends javax.swing.JPanel {
 //        try (BufferedReader br = new BufferedReader(new FileReader(FILE_NAME))) {
 //            String linea;
 //            while ((linea = br.readLine()) != null) {
-//                // Suponiendo formato: "numero,titulo,contenido,idCategoria"
+//                
 //                String[] datos = linea.split(",");
 //                if (datos.length == 4) {
 //                    int numero = Integer.parseInt(datos[0].trim());
@@ -329,7 +322,7 @@ public class JpHistorico extends javax.swing.JPanel {
 //                    Nota nota = new Nota(numero, titulo, contenido, idCategoria);
 //                    notas.add(nota);
 //
-//                    // Organizar las notas por categoría
+//                    // Organizar las notas por categoría , si no esta la nota lo que hace es crear un nuevo array
 //                    notasPorCategoria.computeIfAbsent(idCategoria, k -> new ArrayList<>()).add(nota);
 //                }
 //            }
@@ -344,12 +337,12 @@ public class JpHistorico extends javax.swing.JPanel {
 //    }
 //}
 //
-//public void llenarComboBoxPorCategoria(String idCategoria, JComboBox<String> comboBox) {
-//        comboBox.removeAllItems(); // Limpiar el combo box
+//public void llenarComboBoxPorCategoria(String idCategoria, JComboBox<String> CBCompletadas) {
+//        CBCompletadas.removeAllItems(); // Limpiar el combo box
 //        List<Nota> notasDeCategoria = controladorNota.obtenerNotasPorCategoria(idCategoria);
 //        
 //        for (Nota nota : notasDeCategoria) {
-//            comboBox.addItem(nota.getTitulo()); // Agrega el título u otro identificador de la nota
+//            CBCompletadas.addItem(nota.getTitulo()); // Agrega el título u otro identificador de la nota
 //        }
 //    }
 //

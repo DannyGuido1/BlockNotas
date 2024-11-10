@@ -20,7 +20,6 @@
                 <Property name="text" type="java.lang.String" value="Menu"/>
               </Properties>
               <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="CBMenuMouseClicked"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CBMenuActionPerformed"/>
               </Events>
             </MenuItem>
@@ -29,7 +28,7 @@
                 <Property name="text" type="java.lang.String" value="Historico"/>
               </Properties>
               <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="JMHistoricoMouseClicked"/>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="JMHistoricoMousePressed"/>
               </Events>
             </MenuItem>
           </SubComponents>

@@ -143,8 +143,18 @@ public class JpHistorico extends javax.swing.JPanel {
         });
 
         btnCargarPendientes.setText("Cargar");
+        btnCargarPendientes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnCargarPendientesMouseClicked(evt);
+            }
+        });
 
         btnCargarProceso.setText("Cargar");
+        btnCargarProceso.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnCargarProcesoMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -221,18 +231,132 @@ public class JpHistorico extends javax.swing.JPanel {
         JpCrear jp1 = new JpCrear();
         jp1.setVisible(true);
 
-// TODO add your handling code here:
     }//GEN-LAST:event_btnCrearActionPerformed
 
+    
+     //CARGA LA INFORMACION DE LAS NOTAS AL COMBO BOX DE COMPLETADAS
     private void btnCargarCompletadasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCargarCompletadasMouseClicked
 
+        ControladorNota nota =new ControladorNota();
         
+        
+        for (Nota notas : nota.obtenerNotas() ) {
+        if (notas.getIdcategoria()== 1) {
+            
+            CBCompletadas.addItem(Integer.toString(notas.getNumeroNota()));
+            
+            break;
+        }
+    }
         
 
 
         // TODO add your handling code here:
     }//GEN-LAST:event_btnCargarCompletadasMouseClicked
 
+     //CARGA LA INFORMACION DE LAS NOTAS AL COMBO BOX DE PENDIENTES    
+    private void btnCargarPendientesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCargarPendientesMouseClicked
+
+
+        ControladorNota nota =new ControladorNota();
+        
+        
+        for (Nota notas : nota.obtenerNotas() ) {
+        if (notas.getIdcategoria()== 2) {
+            
+            CBPendientes.addItem(Integer.toString(notas.getNumeroNota()));
+            
+            break;
+        }
+
+      
+    }//GEN-LAST:event_btnCargarPendientesMouseClicked
+}
+    //CARGA LA INFORMACION DE LAS NOTAS AL COMBO BOX DE EN PROCESO
+    private void btnCargarProcesoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCargarProcesoMouseClicked
+       
+       ControladorNota nota =new ControladorNota();
+        
+        
+        for (Nota notas : nota.obtenerNotas() ) {
+        if (notas.getIdcategoria()== 3) {
+            
+            cBoxProceso.addItem(Integer.toString(notas.getNumeroNota()));
+            
+            break;
+        }
+  
+
+
+    }//GEN-LAST:event_btnCargarProcesoMouseClicked
+    }                                             
+
+    
+//    //Metodo para obtener datos desde el archivo plano
+//    
+//   import java.io.BufferedReader;
+//import java.io.FileReader;
+//import java.io.IOException;
+//import java.util.ArrayList;
+//import java.util.HashMap;
+//import java.util.List;
+//import java.util.Map;
+//
+//public class ControladorNota {
+//
+//    private static final String FILE_NAME = "notas.txt";
+//    private List<Nota> notas;
+//    private Map<String, List<Nota>> notasPorCategoria;
+//
+//    public ControladorNota() {
+//        notas = new ArrayList<>();
+//        notasPorCategoria = new HashMap<>();
+//        cargarDatos();
+//    }
+//
+//    private void cargarDatos() {
+//        try (BufferedReader br = new BufferedReader(new FileReader(FILE_NAME))) {
+//            String linea;
+//            while ((linea = br.readLine()) != null) {
+//                // Suponiendo formato: "numero,titulo,contenido,idCategoria"
+//                String[] datos = linea.split(",");
+//                if (datos.length == 4) {
+//                    int numero = Integer.parseInt(datos[0].trim());
+//                    String titulo = datos[1].trim();
+//                    String contenido = datos[2].trim();
+//                    String idCategoria = datos[3].trim();
+//
+//                    Nota nota = new Nota(numero, titulo, contenido, idCategoria);
+//                    notas.add(nota);
+//
+//                    // Organizar las notas por categoría
+//                    notasPorCategoria.computeIfAbsent(idCategoria, k -> new ArrayList<>()).add(nota);
+//                }
+//            }
+//        } catch (IOException e) {
+//            System.out.println("Error al leer el archivo.");
+//            e.printStackTrace();
+//        }
+//    }
+//
+//    public List<Nota> obtenerNotasPorCategoria(String idCategoria) {
+//        return notasPorCategoria.getOrDefault(idCategoria, new ArrayList<>());
+//    }
+//}
+//
+//public void llenarComboBoxPorCategoria(String idCategoria, JComboBox<String> comboBox) {
+//        comboBox.removeAllItems(); // Limpiar el combo box
+//        List<Nota> notasDeCategoria = controladorNota.obtenerNotasPorCategoria(idCategoria);
+//        
+//        for (Nota nota : notasDeCategoria) {
+//            comboBox.addItem(nota.getTitulo()); // Agrega el título u otro identificador de la nota
+//        }
+//    }
+//
+
+    
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> CBCompletadas;

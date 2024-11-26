@@ -115,7 +115,7 @@ public class JpCrear extends javax.swing.JPanel {
                 .addGap(29, 29, 29))
         );
     }// </editor-fold>//GEN-END:initComponents
-
+// Crea y guarda la nota
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
         ControladorNota controlNota=new ControladorNota();
       
@@ -129,9 +129,9 @@ public class JpCrear extends javax.swing.JPanel {
 
     controlNota.agregarNota(notaNueva);
     jTextArea1.setText("");
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_btnGuardarActionPerformed
-
+//carga las categorias al combo box
     private void jTextArea1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextArea1KeyTyped
         String filePath = "C:\\Users\\Usuario\\Documents\\GitHub\\BlockNotas\\ProyectoBlockNotas\\categoria.dat"; // Cambia esto por la ruta de tu archivo
 

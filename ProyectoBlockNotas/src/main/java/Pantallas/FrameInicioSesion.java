@@ -115,7 +115,7 @@ public class FrameInicioSesion extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+// Validacion de inicio de sesion
     private void btnInicioSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInicioSesionActionPerformed
         ControladorUsuario control= new ControladorUsuario();
         String nombre =txtUsuario.getText();
@@ -123,7 +123,7 @@ public class FrameInicioSesion extends javax.swing.JFrame {
         
         
         Usuario usuario= new Usuario(nombre,0,contrasenna);
-        
+        //metodo que valida
         control.inicioSesion(usuario);
 
 // TODO add your handling code here:

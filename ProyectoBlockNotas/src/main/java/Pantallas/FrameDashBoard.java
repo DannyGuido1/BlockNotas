@@ -81,7 +81,7 @@ public class FrameDashBoard extends javax.swing.JFrame {
         // TODO add your handling code here:
 
     }//GEN-LAST:event_CBMenuActionPerformed
-
+    //mostrar Panel historico
     private void JMHistoricoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JMHistoricoMousePressed
         // TODO add your handling code here:
         JpHistorico historico = new JpHistorico();

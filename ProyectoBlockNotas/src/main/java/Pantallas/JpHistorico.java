@@ -35,6 +35,8 @@ public class JpHistorico extends javax.swing.JPanel {
         CargaDatos();
     }
     
+    
+    //controladores de historico
     public void CargaDatos(){
         ControladorHistorico h = new ControladorHistorico();
         ControladorCategoria c = new ControladorCategoria();
@@ -226,7 +228,8 @@ public class JpHistorico extends javax.swing.JPanel {
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    //hacer visible el Panel Crear
     private void btnCrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearActionPerformed
         JpCrear jp1 = new JpCrear();
         jp1.setVisible(true);
@@ -295,11 +298,9 @@ public class JpHistorico extends javax.swing.JPanel {
 //    //Metodo para obtener datos desde el archivo plano
 //    
 //
-//public class ControladorNota {
 //
-//    private static final String FILE_NAME = "notas.txt";
-//    private List<Nota> notas;
-//    private Map<String, List<Nota>> notasPorCategoria;
+//
+//   
 //
 //    public ControladorNota() {
 //        notas = new ArrayList<>();
